@@ -16,8 +16,8 @@ import org.eclipse.persistence.annotations.BatchFetchType;
 @Entity
 @Table(name = "SOHD")//, schema = "OEF")
 @Inheritance(strategy= InheritanceType.TABLE_PER_CLASS)
-//@MappedSuperclass
-//@SecondaryTable(name = "SOHC", pkJoinColumns = @PrimaryKeyJoinColumn(name = "HCSO#", referencedColumnName = "HDSO#"))
+@MappedSuperclass
+@SecondaryTable(name = "SOHC", pkJoinColumns = @PrimaryKeyJoinColumn(name = "HCSO#", referencedColumnName = "HDSO#"))
 @XmlRootElement
 public class SalesOrder implements Serializable {
     private static final long serialVersionUID = 1L;
