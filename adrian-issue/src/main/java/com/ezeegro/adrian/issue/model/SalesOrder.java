@@ -1,13 +1,25 @@
 package com.ezeegro.adrian.issue.model;
 
 
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
+import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.PrimaryKeyJoinColumn;
+import jakarta.persistence.SecondaryTable;
+import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
 import java.util.List;
-
-import javax.persistence.*;
-import javax.xml.bind.annotation.*;
 
 import org.eclipse.persistence.annotations.BatchFetch;
 import org.eclipse.persistence.annotations.BatchFetchType;
@@ -35,13 +47,13 @@ public class SalesOrder implements Serializable {
     public static final int EXPAND_ITEMS = 4;
 
     
-//    @Column(name="HCSO#", table = "SOHC")
-//    private String hcso;
-//    
-//    @Column(name = "HCUSER", table = "SOHC")
-//    private String user = " ";
-//    @Column(name = "HCHCM2", table = "SOHC")
-//    private String attn = " ";
+    @Column(name="HCSO#", table = "SOHC")
+    private String hcso;
+    
+    @Column(name = "HCUSER", table = "SOHC")
+    private String user = " ";
+    @Column(name = "HCHCM2", table = "SOHC")
+    private String attn = " ";
 
     public SalesOrder() {
         super(); //temp for placement

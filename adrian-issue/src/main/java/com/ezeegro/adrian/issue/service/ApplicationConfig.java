@@ -1,10 +1,10 @@
 
 package com.ezeegro.adrian.issue.service;
 
+
+import jakarta.ws.rs.ApplicationPath;
+import jakarta.ws.rs.core.Application;
 import java.util.Set;
-import javax.ws.rs.ApplicationPath;
-import javax.ws.rs.Path;
-import javax.ws.rs.core.Application;
 
 /**
  *

@@ -1,9 +1,13 @@
 package com.ezeegro.adrian.issue.model;
 
+import jakarta.persistence.Id;
+import jakarta.persistence.IdClass;
+import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.Transient;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
-import javax.persistence.*;
+
 
 //@Entity
 //@Table(name = "SOPart")//, schema = "OEF")
